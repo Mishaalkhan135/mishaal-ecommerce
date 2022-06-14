@@ -33,30 +33,28 @@ const Slider = () => {
 			{/* slide div */}
 			{slides.map((slide, index) => {
 				if (index === activeSlide) {
-					return (
-						<div className='wrapper w-full md:h-[500px] font-serif flex  justify-center items-center shadow-2xl rounded-lg border-[#c0c0c0c] border-10px overflow-hidden relative'>
-							<div className='slide flex md:flex-row flex-col justify-center items-center md:h-[100%] h-80'>
-								<div className='Forimage flex flex-1 justify-center items-center h-[100%]'>
-									<img
-										className='md:h-[100%] h-36 md:w-full w-full object-cover'
-										src={slide.src}
-										alt='slider'
-									/>
-								</div>
-								<div className='description p-6'>
-									<h2 className='md:text-[33px] text-lg'>
-										{slide.content.h2}
-									</h2>
-									<p className='md:text-[30px] text-md mt-5'>
-										{slide.content.p}
-									</p>
-									<button className='btn flex justify-center text-center md:ml-36 ml-5 text-white bg-[#8a4df3] rounded-md md:p-3 p-2 hover:scale-[1.1] mt-5 ease-in duration-100 cursor-pointer hover:bg-blue-500 '>
-										Shop Now
-									</button>
-								</div>
+					<div className='wrapper w-full md:h-[500px] font-serif flex  justify-center items-center shadow-2xl rounded-lg border-[#c0c0c0c] border-10px overflow-hidden relative'>
+						<div className='slide flex md:flex-row flex-col justify-center items-center md:h-[100%] h-80'>
+							<div className='Forimage flex flex-1 justify-center items-center h-[100%]'>
+								<img
+									className='md:h-[100%] h-36 md:w-full w-full object-cover'
+									src={slide.src}
+									alt='slider'
+								/>
+							</div>
+							<div className='description p-6'>
+								<h2 className='md:text-[33px] text-lg'>
+									{slide.content.h2}
+								</h2>
+								<p className='md:text-[30px] text-md mt-5'>
+									{slide.content.p}
+								</p>
+								<button className='btn flex justify-center text-center md:ml-36 ml-5 text-white bg-[#8a4df3] rounded-md md:p-3 p-2 hover:scale-[1.1] mt-5 ease-in duration-100 cursor-pointer hover:bg-blue-500 '>
+									Shop Now
+								</button>
 							</div>
 						</div>
-					);
+					</div>;
 				}
 			})}
 			{/* right arrow div */}
